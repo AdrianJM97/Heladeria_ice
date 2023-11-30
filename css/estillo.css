@@ -1,0 +1,39 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: black;
+}
+#contenedor{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+}
+nav{
+    width: auto;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+img{
+    width: 35%;
+    height: 30%;
+}
+footer{
+    border-radius: 0 0 20px 20px;
+    height: auto;
+    margin: auto;
+    padding-top: 6px;
+    text-align: right;
+}
+.pantalla_o{
+    display: none;
+}
+.pantalla_2{
+    display: block;
+}
+.pantalla_1{
+    display: block;
+}

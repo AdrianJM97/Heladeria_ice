@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estillo.css">
+    <title>Heladeria</title>
+</head>
+<body>
+    <div id="contenedor">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><h1><b>Heladeria</b></h1></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              </div>
+            </div>
+        </nav>
+        <div id="pantalla_1" class="pantalla_1">
+            <div class="row">
+              <div class="col-6">
+                <br>
+                <img src="imagenes/75161812-helado-de-chocolate-suave-en-un-cono-de-galleta-dibujado-a-mano-dibujo-ilustracion-en-estilo-de.jpg" alt="" onclick="pedido1()">
+                <h1 id="barquilla">Barquilla</h1>
+                <br>
+                <br>
+
+                
+              
+                <img id="imagen" src="imagenes/ice-cream-cone-cartoon-icon-illustration-food-and-drink-icon-concept-isolated-premium-flat-cartoon-style-vector.jpg" 
+                onclick="pedido2()" alt="">
+                <h1 id="tri-sabor">Tri-sabor</h1>
+                <br>
+              </div>
+              <div class="col-6">
+                <br>
+                <img src="imagenes/kisspng-ice-pops-ice-cream-cones-waffle-popsiclevasarailiustracijosledasmaistas-nemo-5cef50bcc9c338.0288609115591876448264.jpg" onclick="pedido3()" alt="">
+                <h1 id="paleta">Paleta</h1>
+                <br>
+                <br>
+                <img src="imagenes/png-clipart-strawberry-ice-cream-pattern-sticker-cartoon-ice-cream-thumbnail.png" onclick="pedido4()" alt="">
+                <h1 id="tinita">Tinita</h1>
+              </div>
+            </div>
+        </div>
+        <div id="pantalla_2" class="pantalla_o">
+          <div class="row">
+            <div class="col-12">
+              <br>
+              <br>
+              <h1 id="helado">helado</h1>
+              <h1 id="precio">precio</h1>
+              <input type="number" placeholder="Cantidad a pedir "  name="cantidad" id="numero">
+              <br>
+              <br>
+              <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary" type="button" onclick="listo()" id="listo">Listo</button>
+              </div>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-primary">
+            <div class="row">
+              <div class="col-8">
+                <h1>Total:</h1>
+              </div>
+              <div class="col-1">
+                <h1 id="resultado">0</h1>
+              </div>
+              <div class="col-1">
+                <h1>Bs</h1>
+              </div>
+              <div class="col-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <button class="btn btn-light me-md-2" onclick="orden()" type="button">Ordenar</button>
+                </div>
+              </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+<script>
+  function pedido1(){
+    document.getElementById("pantalla_1").classList.add("pantalla_o")
+    document.getElementById("pantalla_1").classList.remove("pantalla_1")
+    document.getElementById("pantalla_2").classList.add("pantalla_2")
+    document.getElementById("helado").innerHTML="Helado:Barquilla"
+    document.getElementById("precio").innerHTML="Precio:20Bs"
+    if(pedido1=pedido1){
+      h=20,00
+    }
+  }
+  function pedido2(){
+    document.getElementById("pantalla_1").classList.add("pantalla_o")
+    document.getElementById("pantalla_1").classList.remove("pantalla_1")
+    document.getElementById("pantalla_2").classList.add("pantalla_2")
+    document.getElementById("helado").innerHTML="Helado:Tri-sabor"
+    document.getElementById("precio").innerHTML="Precio:30Bs"
+    if(pedido2=pedido2){
+      h=30
+    }
+  }
+  function pedido3(){
+    document.getElementById("pantalla_1").classList.add("pantalla_o")
+    document.getElementById("pantalla_1").classList.remove("pantalla_1")
+    document.getElementById("pantalla_2").classList.add("pantalla_2")
+    document.getElementById("helado").innerHTML="Helado:Paleta"
+    document.getElementById("precio").innerHTML="Precio:25Bs"
+    if(pedido3=pedido3){
+      h=25
+    }
+  }
+  function pedido4(){
+    document.getElementById("pantalla_1").classList.add("pantalla_o")
+    document.getElementById("pantalla_1").classList.remove("pantalla_1")
+    document.getElementById("pantalla_2").classList.add("pantalla_2")
+    document.getElementById("helado").innerHTML="Helado:Tinita"
+    document.getElementById("precio").innerHTML="Precio:15Bs"
+    if(pedido4=pedido4){
+      h=15
+    }
+  }
+  t=0;
+  function listo(){
+    document.getElementById("pantalla_2").classList.remove("pantalla_2")
+    document.getElementById("pantalla_1").classList.add("pantalla_1")
+    n1=document.getElementById("numero").value;
+    r=Number(n1)*Number(h)
+    t=Number(t)+Number(r)
+    document.getElementById("resultado").innerHTML=t;
+  }
+  function orden(){
+    document.getElementById("pantalla_2").classList.remove("pantalla_2")
+    document.getElementById("pantalla_1").classList.add("pantalla_1")
+    t=0;
+    document.getElementById("resultado").innerHTML=t;
+    alert("Graciias por su compras")
+  }
+</script>
+</html>
